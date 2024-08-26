@@ -3,7 +3,7 @@ let inherit (mkKey) mkKeymap;
 in {
   plugins.bufferline = {
     enable = true;
-    options = {
+    settings.ptions = {
       diagnostics = "nvim_lsp";
       truncateNames = true;
       offsets = [
