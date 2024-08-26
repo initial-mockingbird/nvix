@@ -43,7 +43,7 @@ in {
   clipboard.providers.wl-copy.enable = true;
 
   globals = {
-    mapleader = " ";
+    mapleader = ",";
 
     floating_window_options = {
       border = "${opts.border}";
