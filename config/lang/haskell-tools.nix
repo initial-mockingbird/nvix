@@ -22,7 +22,7 @@
     -- Toggle a GHCi repl for the current buffer
     vim.keymap.set('n', '<leader>rf', function()
       ht.repl.toggle(vim.api.nvim_buf_get_name(0))
-    end, mkOpts('GHCI for current buffer')
+    end, mkOpts('GHCI for current buffer'))
     vim.keymap.set('n', '<leader>rq', ht.repl.quit, mkOpts('Quit repl'))
     require('telescope').load_extension('ht')
     '';
