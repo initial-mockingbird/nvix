@@ -8,7 +8,7 @@
     local ht = require('haskell-tools')
     local bufnr = vim.api.nvim_get_current_buf()
     function mkOpts(desc)
-      return { noremap = true, silent = true, buffer = bufnr, desc = desc}
+      return { noremap = true, silent = true, buffer = bufnr, desc = desc,}
     end
   -- haskell-language-server relies heavily on codeLenses,
     -- so auto-refresh (see advanced configuration) is enabled by default
