@@ -34,6 +34,12 @@ in {
     ./otter.nix
 
     ./firenvim.nix
+
+    ./toggleterm.nix
+    ./lazygit.nix
+    ./direnv.nix
+    ./multicursor.nix 
+
   ];
 
   enableMan = true;

@@ -1,7 +1,7 @@
 { pkgs, mlKey, ... }: 
 {
   extraPlugins = with pkgs.vimPlugins; [
-    haskell-tools-nvim	
+    haskell-tools-nvim
   ];
 
     extraConfigLua = ''
@@ -12,7 +12,7 @@
     end
   -- haskell-language-server relies heavily on codeLenses,
     -- so auto-refresh (see advanced configuration) is enabled by default
-    vim.keymap.set('n', '<leader>cl', vim.lsp.codelens.run, mkOpts('Haskell Run Codelens') )
+    vim.keymap.set('n', '<leader>rl', vim.lsp.codelens.run, mkOpts('Haskell Run Codelens') )
     -- Hoogle search for the type signature of the definition under the cursor
     vim.keymap.set('n', '<leader>hs', ht.hoogle.hoogle_signature, mkOpts('Hoogle Search Word'))
     -- Evaluate all code snippets
