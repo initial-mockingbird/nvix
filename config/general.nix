@@ -60,7 +60,8 @@ in {
       settings = { suppress_missing_scope = { projects_v2 = true; }; };
     };
     colorizer = {
-      enable = true;
+      #enable = true;
+      enable = false;
       settings.user_default_options = {
         RGB = true;
         RRGGBB = true;
