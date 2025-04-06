@@ -6,17 +6,19 @@ let
 
   # ePlugins are the plugins that are not available in nixpkgs/nixvim coming from flakes
   ePlugins = [
-    (mkPkgs "buffer_manager" inputs.buffer-manager)
     (mkPkgs "color-picker" inputs.color-picker)
     (mkPkgs "moveline" inputs.moveline)
     (mkPkgs "md-pdf" inputs.md-pdf)
-
-    (mkPkgs "windows" inputs.windows)
-    (mkPkgs "windows-mc" inputs.windows-mc)
-    (mkPkgs "windows-a" inputs.windows-a)
   ];
   # nPlugins are normally available in nixpkgs
-  nPlugins = with pkgs.vimPlugins; [ vim-lastplace neodev-nvim nvim-surround ];
+  nPlugins = with pkgs.vimPlugins; [ 
+    vim-lastplace 
+    neodev-nvim 
+    nvim-surround 
+    windows-nvim 
+    middleclass
+    animation-nvim 
+  ];
 
   maps = {
     moveline = [
@@ -57,9 +59,9 @@ in {
       enable = true;
       settings = { suppress_missing_scope = { projects_v2 = true; }; };
     };
-    nvim-colorizer = {
+    colorizer = {
       enable = true;
-      userDefaultOptions = {
+      settings.user_default_options = {
         RGB = true;
         RRGGBB = true;
         names = true;
@@ -77,19 +79,21 @@ in {
     };
     fidget = {
       enable = true;
-      progress.display.progressIcon = { pattern = "moon"; };
-      notification = {
-        window = {
-          relative = "editor";
-          winblend = 0;
-          border = "none";
+      settings = {
+        progress.display.progressIcon = { pattern = "moon"; };
+        notification = {
+          window = {
+            relative = "editor";
+            winblend = 0;
+            border = "none";
+          };
         };
       };
     };
     auto-save = {
       enable = true;
       settings = {
-        execution_message = { enabled = false; };
+        #execution_message = { enabled = false; };
         condition = # lua
           ''
             function(buf)
@@ -120,9 +124,6 @@ in {
           end
         '';
     } "Markdown to PDF preview")
-    (mkKeymap "n" "<leader>bm"
-      ":lua require('buffer_manager.ui').toggle_quick_menu()<cr>"
-      "Toggle buffer manager")
   ] ++ maps.moveline ++ maps.colorpicker ++ maps.windows;
 
 }

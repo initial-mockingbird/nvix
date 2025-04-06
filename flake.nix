@@ -70,20 +70,12 @@
       url = "github:JMarkin/nvim-tree.lua-float-preview";
       flake = false;
     };
-    buffer-manager = {
-      url = "github:j-morano/buffer_manager.nvim";
-      flake = false;
-    };
     color-picker = {
       url = "github:ziontee113/color-picker.nvim";
       flake = false;
     };
     moveline = {
       url = "github:willothy/moveline.nvim";
-      flake = false;
-    };
-    session-manager = {
-      url = "github:Shatur/neovim-session-manager";
       flake = false;
     };
     md-pdf = {
@@ -97,19 +89,6 @@
     };
     nvim-hl-md = {
       url = "github:yaocccc/nvim-hl-mdcodeblock.lua";
-      flake = false;
-    };
-
-    windows = {
-      url = "github:anuvyklack/windows.nvim";
-      flake = false;
-    };
-    windows-mc = {
-      url = "github:anuvyklack/middleclass";
-      flake = false;
-    };
-    windows-a = {
-      url = "github:anuvyklack/animation.nvim";
       flake = false;
     };
   };

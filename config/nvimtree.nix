@@ -41,11 +41,8 @@ let
   '';
 in
 {
-  extraPlugins = [
-    (pkgs.vimUtils.buildVimPlugin {
-      name = "nvim-tree.float";
-      src = inputs.ntree-float;
-    })
+  extraPlugins = with pkgs.vimPlugins; [
+    float-preview-nvim 
   ];
 
   plugins.nvim-tree = {

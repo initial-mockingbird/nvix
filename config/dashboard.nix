@@ -36,13 +36,13 @@
             desc = " Last Session";
             group = "Number";
             key = ".";
-            action = "SessionManager load_last_session";
+            action = "SessionRestore";
           }
           {
             desc = " List Session";
             group = "DiagnosticHint";
             key = "l";
-            action = "SessionManager load_session";
+            action = "SessionSearch";
           }
           {
             desc = "${icons.ui.BoldClose} Quit";

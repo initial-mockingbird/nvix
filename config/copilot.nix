@@ -4,12 +4,14 @@ let
 in{
   plugins.copilot-lua = {
     enable = true;
-    filetypes=  {
-      markdown = true;
-    };
-    suggestion = {
-      enabled = true;
-      autoTrigger = true;
+    settings = {
+      filetypes=  {
+        markdown = true;
+      };
+      suggestion = {
+        enabled = true;
+        autoTrigger = true;
+      };
     };
   };
   keymaps = [

@@ -9,7 +9,7 @@ in {
       ]])
       '';
 
-  extraPlugins = with pkgs.vimPlugins; [
+ extraPlugins = with pkgs.vimPlugins; [
     Coqtail
   ];
   

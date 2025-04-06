@@ -13,16 +13,17 @@
     })
   ];
   plugins = {
+    web-devicons.enable = true;
     ts-autotag.enable = true;
     lsp.servers = {
-      tsserver.enable = true;
-      vuels.enable = true;
+      ts_ls.enable = true;
+      # vuels.enable = true;
       tailwindcss.enable = true;
       svelte.enable = true;
       jsonls.enable = true;
       html.enable = true;
       eslint.enable = true;
-      emmet-ls.enable = true;
+      emmet_ls.enable = true;
       cssls.enable = true;
       biome.enable = true;
     };
@@ -30,6 +31,7 @@
       formatting = {
         prettierd = {
           enable = true;
+          disableTsServerFormatter = true;
           settings = # lua
             ''
               {
