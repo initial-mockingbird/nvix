@@ -6,6 +6,8 @@
       float_opts = {
         border = "curved";
       };
+      shade_terminals = true;
+      
     };
   };
 

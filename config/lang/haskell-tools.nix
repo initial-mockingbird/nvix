@@ -15,7 +15,7 @@
       -- so auto-refresh (see advanced configuration) is enabled by default
       vim.keymap.set('n', '<leader>rl', vim.lsp.codelens.run, mkOpts('Haskell Run Codelens') )
       -- Hoogle search for the type signature of the definition under the cursor
-      vim.keymap.set('n', '<leader>hs', ht.hoogle.hoogle_signature, mkOpts('Hoogle Search Word'))
+      vim.keymap.set('n', '<leader>xs', ht.hoogle.hoogle_signature, mkOpts('Hoogle Search Word'))
       -- Evaluate all code snippets
       vim.keymap.set('n', '<leader>ea', ht.lsp.buf_eval_all, mkOpts('Eval all code snippets'))
       -- Toggle a GHCi repl for the current package
@@ -25,7 +25,6 @@
         ht.repl.toggle(vim.api.nvim_buf_get_name(0))
       end, mkOpts('GHCI for current buffer'))
       vim.keymap.set('n', '<leader>rq', ht.repl.quit, mkOpts('Quit repl'))
-      require('telescope').load_extension('ht')
     '';
   };
 
