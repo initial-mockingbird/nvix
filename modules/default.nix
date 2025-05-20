@@ -19,5 +19,6 @@
     treesitter = ./treesitter;
     auto-session = ./auto-session;
     colorschemes = ./colorschemes;
+    toggleterm = ./toggleterm;
   };
 }
