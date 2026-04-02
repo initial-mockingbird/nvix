@@ -20,7 +20,7 @@ in
       settings.preset = "obsidian";
     };
     obsidian = {
-      enable = true;
+      enable = false;
       settings = {
         footer.enabled = false;
         preferred_link_style = "markdown";
