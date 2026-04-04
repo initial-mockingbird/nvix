@@ -23,11 +23,11 @@ in
     vim.g.vimtex_mappings_enabled = 0
   '';
 
-  globals.maplocalleader = " t"; # Set the local leader to "<leader>t"
+  globals.maplocalleader = " w"; # Set the local leader to "<leader>t"
 
   wKeyList = [
     (wKeyObj [
-      "<leader>t"
+      "<leader>w"
       ""
       "tex"
     ])
