@@ -8,7 +8,6 @@
 
   plugins.haskell-tools = {
     enable = true;
-    enableTelescope = true;
 
   };
 
