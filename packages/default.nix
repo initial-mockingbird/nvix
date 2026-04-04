@@ -36,6 +36,7 @@ let
     self.nvixPlugins.blink-cmp
     self.nvixPlugins.lang
     self.nvixPlugins.lsp
+    self.nvixPlugins.toggleterm
 
     # Productivity
     self.nvixPlugins.autosession
